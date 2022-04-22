@@ -1,6 +1,6 @@
 # A Practice to learn Redux
 
-##from Pluralsight##
+## from Pluralsight
 
 Building Applications with React and Redux
 by Cory House

@@ -8,6 +8,8 @@ function Header() {
             <NavLink to="/" activestyle={activeStyle}>HomePage</NavLink>
             {" | "}
             <NavLink to="/about" activestyle={activeStyle}>About</NavLink>
+            {" | "}
+            <NavLink to="/courses" activestyle={activeStyle}>Courses</NavLink>
 
         </div>
     );
