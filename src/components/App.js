@@ -2,9 +2,9 @@ import React from "react";
 import HomePage from './HomePage';
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom"
 import AboutPage from "./AboutPage"
-import Header from "./Header"
-import PageNotFound from "./PageNotFound";
-import CoursesPage from "./Courses.js/CoursesPage";
+import Header from "./common/Header"
+import PageNotFound from "./common/PageNotFound";
+import CoursesPage from "./Courses/CoursesPage";
 
 function App() {
   return (
