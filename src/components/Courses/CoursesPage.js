@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { connect } from "react-redux";
 import TextInput from '../common/TextInput';
-
+import * as courseActions from '../../redux/actions/courseActions';
 
 function CoursesPage(props) {
     const [course, setCourse] = useState({
@@ -16,7 +17,8 @@ function CoursesPage(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
-        alert(course.title)
+        // alert(course.title)
+        this.props.dispatch(courseActions.createCourse(this.state.course))
     }
 
     return (
@@ -37,4 +39,11 @@ function CoursesPage(props) {
     );
 }
 
-export default CoursesPage;
+
+function mapStateToProps(state) {
+    return {
+        courses: state.courses
+    }
+}
+
+export default connect(mapStateToProps)(CoursesPage);
