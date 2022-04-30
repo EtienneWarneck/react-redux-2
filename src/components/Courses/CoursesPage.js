@@ -17,8 +17,7 @@ function CoursesPage(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
-        // alert(course.title)
-        this.props.dispatch(courseActions.createCourse(this.state.course))
+        props.dispatch(courseActions.createCourse(course))
     }
 
     return (
@@ -33,7 +32,9 @@ function CoursesPage(props) {
                     name="title"
                 />
                 <input type="submit" value="save" />
-
+                {props.courses.map(course => (
+                    <div key={course.title}>{course.title}</div>
+                ))}
             </form>
         </div>
     );
