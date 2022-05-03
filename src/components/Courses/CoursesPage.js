@@ -17,7 +17,7 @@ function CoursesPage(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
-        props.dispatch(courseActions.createCourse(course))
+        props.createCourse(course)
     }
 
     return (
@@ -47,4 +47,10 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(CoursesPage);
+function mapDispatchToProps(dispatch) {
+    return {
+        createCourse: course => dispatch(courseActions.createCourse(course))
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
