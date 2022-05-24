@@ -14,7 +14,7 @@ export function loadCourses() { //thunk
         return courseApi.getCourses().then(courses => {
             dispatch(loadCoursesSuccess(courses));
         }).catch(error => {
-            throw error
+            throw error;
         })
     }
 }
